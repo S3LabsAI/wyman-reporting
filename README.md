@@ -6,12 +6,13 @@ Static hosting for the Kristin Wyman Agency campaign reports, deployed on Vercel
 
 | Path | Description |
 | --- | --- |
-| `index.html` | Kristin Wyman Agency — Campaign Configuration (2026-09-11). Served at the site root. |
+| `index.html` | Kristin Wyman Insurance Agency — Home Campaign Performance Review (Sept 15 – Oct 13, 2026). Served at the site root. |
 | `vercel.json` | Vercel config: static site, no build step, caching and security headers. |
 | `.vercelignore` | Keeps repo metadata out of the deployment bundle. |
 
 The report is fully self-contained: all images are inline base64 and the only
-external request is the Inter webfont from Google Fonts. There is no build
+external requests are the Sora and Outfit webfonts from Google Fonts. It follows
+the viewer's light/dark system setting and includes a theme toggle. There is no build
 step, no framework, and no dependencies.
 
 ## Deploying
