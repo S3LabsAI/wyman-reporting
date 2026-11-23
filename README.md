@@ -6,7 +6,8 @@ Static hosting for the Kristin Wyman Agency campaign reports, deployed on Vercel
 
 | Path | Description |
 | --- | --- |
-| `index.html` | Kristin Wyman Insurance Agency — Home Campaign Performance Review (Sept 15 – Oct 13, 2026). Served at the site root. |
+| `index.html` | Reports hub for Kristin Wyman Insurance Agency. Served at the site root, with one card per report. |
+| `reports/home-campaign-performance-review.html` | Home Campaign Performance Review (Sept 15 – Oct 13, 2026), reviewed Nov 11, 2026. |
 | `vercel.json` | Vercel config: static site, no build step, caching and security headers. |
 | `.vercelignore` | Keeps repo metadata out of the deployment bundle. |
 
@@ -30,12 +31,10 @@ branches get preview URLs.
 
 ## Adding another report
 
-1. Drop the new HTML file in the repo root, e.g. `2026-10-15-campaign-review.html`.
-2. Thanks to `cleanUrls`, it will be reachable at `/2026-10-15-campaign-review`.
-3. Commit and push — Vercel redeploys automatically.
-
-To make a newer report the landing page, replace `index.html` with it and keep
-the previous one under its dated filename.
+1. Drop the new HTML file in `reports/`, e.g. `reports/home-campaign-performance-review-2026-12.html`.
+2. Add a card for it to the `.rgrid` in `index.html`, move the "Current" tag to the new card, and update the "Latest review" and "Reports" values in the strip.
+3. Thanks to `cleanUrls`, it will be reachable at `/reports/<name>`.
+4. Commit and push. Vercel redeploys automatically.
 
 ## Access
 
